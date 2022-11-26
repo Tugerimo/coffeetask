@@ -1,0 +1,4 @@
+USED:
+PyQt5
+sqlite3
+sys
