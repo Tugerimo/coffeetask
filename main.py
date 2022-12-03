@@ -9,6 +9,9 @@ class Coffee(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi("main.ui", self)
+        self.load_table()
+
+    def load_table(self):
         con = sqlite3.connect("coffee.sqlite")
         cur = con.cursor()
         result = cur.execute('''SELECT * from coffees''').fetchall()
